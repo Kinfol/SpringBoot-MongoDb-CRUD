@@ -1,0 +1,9 @@
+#spring:
+#  data:
+#    mongo:
+#      repositories:
+#        enabled: true
+#    mongodb:
+#      uri: ${mongo_uri:mongodb://localhost:27017/springbootCRUD}
+##      collection: ${mongo_collection:drivers}
+#      database: ${mongo_database:springbootCRUD}

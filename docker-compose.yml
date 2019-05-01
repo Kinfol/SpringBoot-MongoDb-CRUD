@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  springbootmongocrud-v.0.1:
+    image: springbootmongocrud-v.0.1
+    build:
+      context: ./
+      dockerfile: Dockerfile
+
+    ports:
+      - "8080:8080"

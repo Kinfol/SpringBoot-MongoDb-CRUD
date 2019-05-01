@@ -25,21 +25,25 @@ public class DriverController {
     public Driver getDriver(@RequestParam String driverLicense) {
         return driverService.getByDriverLicense(driverLicense);
     }
+
     @RequestMapping("/getAll")
-    public List<Driver> getAll(){
+    public List<Driver> getAll() {
         return driverService.getAll();
     }
+
     @RequestMapping("/update")
     public String update(@RequestParam String firstName, @RequestParam String lastName, @RequestParam int age, @RequestParam String driverLicense) {
         Driver p = driverService.update(firstName, lastName, age, driverLicense);
         return p.toString();
     }
+
     @RequestMapping("/delete")
     public String delete(@RequestParam String driverLicense) {
         driverService.delete(driverLicense);
-        return "Deleted "+driverLicense;
+        return "Deleted " + driverLicense;
     }
-    @RequestMapping ("/deleteAll")
+
+    @RequestMapping("/deleteAll")
     public String deleteAll() {
         driverService.deleteAll();
         return "Deleted all records";

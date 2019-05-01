@@ -55,6 +55,7 @@
 
 
     <build>
+        <finalName>springbootmongocrud-v.0.1</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

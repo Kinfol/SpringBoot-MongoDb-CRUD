@@ -15,16 +15,19 @@ public class DriverService {
     private DriverRepository driverRepository;
 
     //Create operation
-    public Driver create(String firstName,String lastName, int age, String driverLicense) {
+    public Driver create(String firstName, String lastName, int age, String driverLicense) {
         return driverRepository.save(new Driver(firstName, lastName, age, driverLicense));
     }
+
     //Retrieve operation
-    public List<Driver> getAll(){
+    public List<Driver> getAll() {
         return driverRepository.findAll();
     }
+
     public Driver getByDriverLicense(String driverLicense) {
         return driverRepository.findByDriverLicense(driverLicense);
     }
+
     //Update operation
     public Driver update(String firstName, String lastName, int age, String driverLicense) {
         Driver p = driverRepository.findByDriverLicense(driverLicense);
@@ -33,10 +36,12 @@ public class DriverService {
         p.setAge(age);
         return driverRepository.save(p);
     }
+
     //Delete operation
     public void deleteAll() {
         driverRepository.deleteAll();
     }
+
     public void delete(String firstName) {
         Driver p = driverRepository.findByDriverLicense(firstName);
         driverRepository.delete(p);
